@@ -17,11 +17,12 @@ SHOW DATABASES;
 # Tabelle anlegen:
 
 USE boo;
+DROP TABLE IF EXISTS test;
 
-CREATE TABLE test
+CREATE TABLE IF NOT EXISTS test
 (
- name VARCHAR(20),
-    age INT 
+ name VARCHAR(20) NOT NULL DEFAULT "TBA",
+    age INT NOT NULL DEFAULT 0
     );
     
     # alle Tabellen in der DB anzeigen
