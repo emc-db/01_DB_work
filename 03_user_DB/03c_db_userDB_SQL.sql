@@ -15,11 +15,11 @@ id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, -- id
 # Struktur
 DESCRIBE boo.users;
 
-#Daten mit passwort, nachteil:liegen offen, daher in c verschlüsselt
+#Daten
 INSERT INTO boo.users(userName,firstName,familyName,userPwd)
-VALUES ("max","Max","Mütze","1234");
+VALUES ("max","Max","Mütze",SHA1("1234")); -- pw verschlüsselt
 INSERT INTO boo.users(userName,firstName,familyName,userPwd)
-VALUES ("maxine","Maxine","Mützerich","#7xD0");
+VALUES ("maxine","Maxine","Mützerich",SHA1("#7xD0")); -- pw verschlüsselt
 INSERT INTO boo.users(userName,firstName,familyName,userPwd)
 VALUES ("maxl","Max","Mützerich","user123");
 
