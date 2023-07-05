@@ -21,7 +21,21 @@ VALUES ("max","Max","Mütze",SHA1("1234")); -- pw verschlüsselt
 INSERT INTO boo.users(userName,firstName,familyName,userPwd)
 VALUES ("maxine","Maxine","Mützerich",SHA1("#7xD0")); -- pw verschlüsselt
 INSERT INTO boo.users(userName,firstName,familyName,userPwd)
-VALUES ("maxl","Max","Mützerich","user123");
+VALUES ("maxl","Max","Mützerich","user123"); 
 
 /* Inhalte : Ergebnistabelle */
+SELECT * FROM boo.users;
+
+#Änderungen an bestehender Tabelle 
+ALTER TABLE
+boo.users
+ADD
+userPLZ VARCHAR(5) NOT NULL DEFAULT "00000"
+;
+
+DESCRIBE boo.users;
+SELECT * FROM boo.users;
+
+UPDATE boo.users SET userPLZ = "70367" WHERE id = 1;
+UPDATE boo.users SET userPLZ = "70481" WHERE firstName = "Maxine";
 SELECT * FROM boo.users;
