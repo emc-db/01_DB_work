@@ -11,7 +11,7 @@
 */
 
 -- CONCAT() / Verknuepfung "string" + "string" ....
-/*
+
 SELECT
 	ticker AS "SYM",
     c_name "Unternehmen",
@@ -19,7 +19,7 @@ SELECT
 FROM stocks.ccc
 #ggf. Restriktionen
 LIMIT 10;
-*/
+
 
 -- UPPER() --> alles in Großbuchstaben
 /*
