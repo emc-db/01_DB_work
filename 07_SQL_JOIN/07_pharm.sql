@@ -20,12 +20,32 @@ Bezeichnung VARCHAR (300)
 );
 
 INSERT INTO Wirkstoff VALUES
-(1, 'Aspirin'),
+(1, 'ASS'),
 (2, 'EDTA'),
-(3, 'TAH'),
+(3, 'DMSO'),
 (4, 'OXC'),
-(5, 'INS');
+(5, 'NAL');
 
-SHOW TABLES;
-SELECT * FROM Wirkstoff;
+# SHOW TABLES;
+# SELECT * FROM Wirkstoff;
 
+CREATE TABLE Arzneimittel (
+AMID INTEGER PRIMARY KEY,
+Bezeichnung VARCHAR  (300),
+HerstellerID
+Preis
+    rezeptpflichtig BOOLEAN
+);
+
+INSERT INTO Arzneimittel VALUES
+
+(1, 'Aspirin', 1, 7.99,),
+(2, 'EDTA-Kapseln', 2, 4.99,),
+(3, 'Obnitix', 3, 19.99,)
+(4, 'Targin', 1, 14.00,)
+
+
+CREATE TABLE Arzneimittelwirkstoffe(
+
+
+)
